@@ -16,9 +16,16 @@ struct DataSequence: SequenceType {
         var offset:Int = 0
         
         return anyGenerator {
+            
+            let subset = self.data.
+            
             let result = self.data.subdataWithRange(NSRange(location: offset, length: min(self.chunkSize, self.data.length - offset)))
+            
             offset += result.length
-            return result.length > 0 ? result : nil
+            
+            guard result.length > 0 else { return nil }
+            
+            return result
         }
     }
 }
