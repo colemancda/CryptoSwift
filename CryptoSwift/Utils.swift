@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Marcin Krzyzanowski. All rights reserved.
 //
 
-import SwiftFoundation
-
 func rotateLeft(v:UInt8, n:UInt8) -> UInt8 {
     return ((v << n) & 0xFF) | (v >> (8 - n))
 }
@@ -46,15 +44,4 @@ func xor(a: [UInt8], b:[UInt8]) -> [UInt8] {
         xored[i] = a[i] ^ b[i]
     }
     return xored
-}
-
-func perf(text: String, closure: () -> ()) {
-    let measurementStart = Date();
-    
-    closure()
-    
-    let measurementStop = Date();
-    let executionTime = measurementStop - measurementStart
-    
-    print("\(text) \(executionTime)");
 }
