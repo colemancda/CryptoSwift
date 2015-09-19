@@ -6,10 +6,15 @@
 //  Copyright (c) 2014 Marcin Krzyzanowski. All rights reserved.
 //
 
-import Foundation
-
 /** String extension */
-extension String {
+public extension String {
+    
+    public func UTF8Data() -> [UInt8] {
+        
+        let data = self.utf8.map { (codeUnit: UTF8.CodeUnit) -> UInt8 in return codeUnit }
+        
+        return data
+    }
     
     /** Calculate MD5 hash */
     public func md5() -> String? {

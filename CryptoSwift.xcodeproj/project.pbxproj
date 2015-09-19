@@ -84,6 +84,9 @@
 		6E5540C71BADE7BF00712834 /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DA2541A4ED408002BA3EF /* AESTests.swift */; };
 		6E5540C91BADE7BF00712834 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754BE45519693E190098E6F3 /* CryptoSwift.framework */; };
 		6E5540CB1BADE7BF00712834 /* HMACTests.swift in Resources */ = {isa = PBXBuildFile; fileRef = 758A94271A65C59200E46135 /* HMACTests.swift */; };
+		6E5540D21BADECCD00712834 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5540D11BADECCD00712834 /* DataExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		6E5540D31BADECCD00712834 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5540D11BADECCD00712834 /* DataExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		6E5540D41BADECCD00712834 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5540D11BADECCD00712834 /* DataExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		75100F8F19B0BC890005C5F5 /* Poly1305Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75100F8E19B0BC890005C5F5 /* Poly1305Tests.swift */; };
 		75164E4919AD30AC00737F30 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75164E4819AD30AC00737F30 /* Utils.swift */; };
 		751C5C3D19B26B000094C75D /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C5C3C19B26B000094C75D /* Poly1305.swift */; };
@@ -264,6 +267,7 @@
 		6E5540821BADE7AA00712834 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5540AE1BADE7B200712834 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5540CF1BADE7BF00712834 /* CryptoSwiftTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CryptoSwiftTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5540D11BADECCD00712834 /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		750A545F1992D2680017DA75 /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		75100F8E19B0BC890005C5F5 /* Poly1305Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poly1305Tests.swift; sourceTree = "<group>"; };
 		75153D4119AA3C7900750381 /* SHA2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA2.swift; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 				75164E4819AD30AC00737F30 /* Utils.swift */,
 				758C764019B61AE500653BC6 /* Generics.swift */,
 				75BE4EB01B1E4A9F007A2B57 /* IntegerConvertible.swift */,
+				6E5540D11BADECCD00712834 /* DataExtension.swift */,
 				6E5540561BADE55900712834 /* DataSequence.swift */,
 				752DEF7619693EA000E17557 /* NSDataExtension.swift */,
 				75D2D19F1B5689EB000A2615 /* NSDataSequence.swift */,
@@ -683,6 +688,7 @@
 				6E55405C1BADE7AA00712834 /* UInt64Extension.swift in Sources */,
 				6E55405D1BADE7AA00712834 /* Poly1305.swift in Sources */,
 				6E55405E1BADE7AA00712834 /* Hash.swift in Sources */,
+				6E5540D31BADECCD00712834 /* DataExtension.swift in Sources */,
 				6E55405F1BADE7AA00712834 /* CipherBlockMode.swift in Sources */,
 				6E5540601BADE7AA00712834 /* IntegerConvertible.swift in Sources */,
 				6E5540611BADE7AA00712834 /* SHA2.swift in Sources */,
@@ -721,6 +727,7 @@
 				6E5540881BADE7B200712834 /* UInt64Extension.swift in Sources */,
 				6E5540891BADE7B200712834 /* Poly1305.swift in Sources */,
 				6E55408A1BADE7B200712834 /* Hash.swift in Sources */,
+				6E5540D41BADECCD00712834 /* DataExtension.swift in Sources */,
 				6E55408B1BADE7B200712834 /* CipherBlockMode.swift in Sources */,
 				6E55408C1BADE7B200712834 /* IntegerConvertible.swift in Sources */,
 				6E55408D1BADE7B200712834 /* SHA2.swift in Sources */,
@@ -774,6 +781,7 @@
 				75D94E2819B60DDE007CB2A4 /* UInt64Extension.swift in Sources */,
 				751C5C3D19B26B000094C75D /* Poly1305.swift in Sources */,
 				7552614E1993051E000D2B20 /* Hash.swift in Sources */,
+				6E5540D21BADECCD00712834 /* DataExtension.swift in Sources */,
 				75BC3AE31A4E412000ADF343 /* CipherBlockMode.swift in Sources */,
 				75BE4EB11B1E4A9F007A2B57 /* IntegerConvertible.swift in Sources */,
 				7539E32E1B3B4E970037F4E1 /* SHA2.swift in Sources */,
