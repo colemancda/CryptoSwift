@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Marcin Krzyzanowski. All rights reserved.
 //
 
-import Foundation
-
 final class MD5 : HashProtocol  {
     var size:Int = 16 // 128 / 8
     let message: [UInt8]
@@ -42,16 +40,16 @@ final class MD5 : HashProtocol  {
     
     private let h:[UInt32] = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476]
     
-    func calculate() -> NSData {
-        let tmpMessage = prepare(64)
+    func calculate() -> [UInt8] {
+        var tmpMessage = prepare(64)
 
         // hash values
         var hh = h
         
         // Step 2. Append Length a 64-bit representation of lengthInBits
-        let lengthInBits = (message.length * 8)
+        let lengthInBits = (message.count * 8)
         let lengthBytes = lengthInBits.bytes(64 / 8)
-        tmpMessage.appendBytes(Array(lengthBytes.reverse())); //FIXME: Array?
+        tmpMessage += (Array(lengthBytes.reverse())); //FIXME: Array?
 
         // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8 // 64
