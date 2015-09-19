@@ -6,13 +6,11 @@
 //  Copyright (c) 2014 Marcin Krzyzanowski. All rights reserved.
 //
 
-import Foundation
-
 public enum Hash {
-    case md5(NSData)
-    case sha1(NSData)
-    case sha224(NSData), sha256(NSData), sha384(NSData), sha512(NSData)
-    case crc32(NSData)
+    case md5([UInt8])
+    case sha1([UInt8])
+    case sha224([UInt8]), sha256([UInt8]), sha384([UInt8]), sha512([UInt8])
+    case crc32([UInt8])
     
     public func calculate() -> NSData? {
         switch self {

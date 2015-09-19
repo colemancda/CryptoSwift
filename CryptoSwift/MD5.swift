@@ -10,9 +10,9 @@ import Foundation
 
 final class MD5 : HashProtocol  {
     var size:Int = 16 // 128 / 8
-    let message: NSData
+    let message: [UInt8]
     
-    init (_ message: NSData) {
+    init (_ message: [UInt8]) {
         self.message = message
     }
 

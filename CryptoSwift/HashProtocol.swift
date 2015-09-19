@@ -9,22 +9,22 @@
 import Foundation
 
 internal protocol HashProtocol {
-    var message: NSData { get }
+    var message: [UInt8] { get }
 
-    /** Common part for hash calculation. Prepare header data. */
-    func prepare(len:Int) -> NSMutableData
+    /// Common part for hash calculation. Prepare header data.
+    func prepare(len:Int) -> [UInt8]
 }
 
 extension HashProtocol {
 
-    func prepare(len:Int) -> NSMutableData {
-        let tmpMessage: NSMutableData = NSMutableData(data: self.message)
+    func prepare(len:Int) -> [UInt8] {
+        var tmpMessage = self.message
         
         // Step 1. Append Padding Bits
-        tmpMessage.appendBytes([0x80]) // append one bit (UInt8 with one bit) to message
+        tmpMessage.append(0x80) // append one bit (UInt8 with one bit) to message
         
         // append "0" bit until message length in bits ≡ 448 (mod 512)
-        var msgLength = tmpMessage.length
+        var msgLength = tmpMessage.count
         var counter = 0
         
         while msgLength % len != (len - 8) {
@@ -32,12 +32,12 @@ extension HashProtocol {
             msgLength++
         }
         
-        let bufZeros = UnsafeMutablePointer<UInt8>(calloc(counter, sizeof(UInt8)))
+        for _ in 0...counter {
+            
+            tmpMessage.append(UInt8())
+        }
         
-        tmpMessage.appendBytes(bufZeros, length: counter)
-        
-        bufZeros.destroy()
-        bufZeros.dealloc(1)
+        assert(tmpMessage.count == msgLength)
         
         return tmpMessage
     }
