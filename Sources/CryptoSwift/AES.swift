@@ -10,7 +10,7 @@
 
 private typealias Key = SecureBytes
 
-final public class AES: BlockCipherType {
+final public class AES: BlockCipher {
     public enum Error: ErrorType {
         case BlockSizeExceeded
         case InvalidKeyOrInitializationVector
@@ -441,7 +441,7 @@ extension AES {
     }
 }
 
-extension AES: CipherType {
+extension AES: CipherProtocol {
     // MARK: - Cipher
     
     public func cipherEncrypt(bytes:[UInt8]) throws -> [UInt8] {

@@ -8,7 +8,7 @@
 
 private typealias Key = SecureBytes
 
-final public class Rabbit: BlockCipherType {
+final public class Rabbit: BlockCipher {
     
     /// Size of IV in bytes
     public static let ivSize = 64 / 8
@@ -202,7 +202,7 @@ final public class Rabbit: BlockCipherType {
 
 // MARK: - CipherType
 
-extension Rabbit: CipherType {
+extension Rabbit: CipherProtocol {
     public func cipherEncrypt(bytes:[UInt8]) -> [UInt8] {
         return self.encrypt(bytes)
     }
