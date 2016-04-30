@@ -51,11 +51,6 @@ extension String {
     
     public extension NSData {
         
-        convenience init?(base64Encoded: String, options: NSDataBase64DecodingOptions) {
-            
-            self.init(base64EncodedString: base64Encoded, options: options)
-        }
-        
         private static var base64ByteMappings: [Range<UInt8>] { return [
                                                                            
             65 ..< 91,      // A-Z
@@ -160,22 +155,6 @@ extension String {
             let encodedBytes = NSData.base64EncodeBytes(decodedBytes, options: options)
             let characters = encodedBytes.map { Character(UnicodeScalar($0)) }
             return String(characters)
-        }
-    }
-    
-    public extension NSMutableData {
-        
-        func append(_ bytes: UnsafePointer<Void>, length: Int) {
-            
-            appendBytes(bytes, length: length)
-        }
-    }
-    
-    public extension NSDate {
-        
-        func timeIntervalSince(_ date: NSDate) -> NSTimeInterval {
-            
-            return timeIntervalSinceDate(date)
         }
     }
     
