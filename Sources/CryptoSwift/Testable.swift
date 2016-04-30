@@ -10,7 +10,6 @@
 
 public struct Testable {
     
-    @inline(__always)
     public static func toUInt32Array(_ slice: ArraySlice<UInt8>) -> Array<UInt32>  {
         
         return CryptoSwift.toUInt32Array(slice)
