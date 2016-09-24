@@ -78,6 +78,10 @@ extension Data {
 }
 
 extension Data {
+
+    public var bytes: Array<UInt8> {
+        return Array(self)
+    }
     
     public func toHexString() -> String {
         return self.bytes.toHexString()
